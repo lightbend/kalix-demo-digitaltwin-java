@@ -178,9 +178,9 @@ mvn compile
 ## Copy-paste list
 ```
 mvn archetype:generate \
-  -DarchetypeGroupId=com.akkaserverless \
-  -DarchetypeArtifactId=akkaserverless-maven-archetype \
-  -DarchetypeVersion=0.10.6
+-DarchetypeGroupId=io.kalix \
+-DarchetypeArtifactId=kalix-maven-archetype \
+-DarchetypeVersion=LATEST
 ```
 ```
 com.example
