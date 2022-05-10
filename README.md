@@ -101,24 +101,14 @@ mvn -Pit verify
 ## Run locally
 ??
 
-## Package
+## Package & deploy
 1. Edit `pom.xml` and update `my-docker-repo` in `<dockerImage>my-docker-repo/${project.artifactId}</dockerImage>`
 2. Execute in terminal:
 ```
-mvn package
-```
-3. Push docker image to repository:
-```
-mvn docker:push
+mvn deploy
 ```
 
-## Deploy to Kalix
-1. Deploy project:
-```
-kalix service deploy digitaltwin aklikic/digitaltwin:1.0-SNAPSHOT
-```
-Note: replace `aklikic` as in Package
-2. Expose service:
+## Expose service
 ```
 kalix services expose digitaltwin
 ```
@@ -207,13 +197,7 @@ mvn test
 mvn -Pit verify
 ```
 ```
-mvn package
-```
-```
-mvn docker:push
-```
-```
-kalix service deploy digitaltwin aklikic/digitaltwin:1.0-SNAPSHOT
+mvn deploy
 ```
 ```
 curl -XPOST -d '{
